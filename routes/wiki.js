@@ -12,11 +12,11 @@ models.use(Git);
 
 router.get("/", _getIndex);
 router.get("/wiki", _getWiki);
-router.options("/wiki/:page", corsEnabler);
-router.get("/wiki/:page", corsEnabler, _getWikiPage);
-router.get("/wiki/:page/history", _getHistory);
-router.get("/wiki/:page/:version", _getWikiPage);
-router.get("/wiki/:page/compare/:revisions", _getCompare);
+router.options("/:page", corsEnabler);
+router.get("/:page", corsEnabler, _getWikiPage);
+router.get("/:page/history", _getHistory);
+router.get("/:page/:version", _getWikiPage);
+router.get("/:page/compare/:revisions", _getCompare);
 
 function _getHistory(req, res) {
 
@@ -234,7 +234,7 @@ function _getCompare(req, res) {
 }
 
 function _getIndex(req, res) {
-  res.redirect(proxyPath + "/wiki/" + app.locals.config.get("pages").index);
+  res.redirect(proxyPath + "/" + app.locals.config.get("pages").index);
 }
 
 module.exports = router;

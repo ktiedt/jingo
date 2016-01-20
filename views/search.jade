@@ -24,7 +24,7 @@ block content
       dl.search-results
         each match in matches
           dt
-            +anchor("/wiki/" + match.pageName + "?hl=" + encodeURIComponent(term), match.pageName)
+            +anchor("/" + match.pageName + "?hl=" + encodeURIComponent(term), match.pageName)
             span.nl #{match.line}
           dd #{match.text}
   else
@@ -36,6 +36,6 @@ block content
         dl.jingo-search-results
           each match in matches
             dt
-              +anchor("/wiki/" + match.pageName + "?hl=" + encodeURIComponent(term), match.pageName)
+              +anchor("/" + match.pageName + "?hl=" + encodeURIComponent(term), match.pageName)
               span.nl #{match.line}
             dd #{match.text}

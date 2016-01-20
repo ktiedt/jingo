@@ -63,7 +63,7 @@ describe ("Models", function () {
           expect(m.filename).to.equal("vergogna.md");
           expect(m.pathname).to.equal("vergogna.md");
           done();
-        }); 
+        });
       });
     });
 
@@ -113,12 +113,12 @@ describe ("Models", function () {
         var Page = models.Page,
           pname = "verguenza";
 
-        expect(Page.urlFor(pname, "show")).to.equal("/wiki/verguenza");
+        expect(Page.urlFor(pname, "show")).to.equal("/verguenza");
         expect(Page.urlFor(pname, "edit")).to.equal("/pages/verguenza/edit");
         expect(Page.urlFor(pname, "edit error")).to.equal("/pages/verguenza/edit?e=1");
         expect(Page.urlFor(pname, "edit put")).to.equal("/pages/verguenza");
-        expect(Page.urlFor(pname, "history")).to.equal("/wiki/verguenza/history");
-        expect(Page.urlFor(pname, "compare")).to.equal("/wiki/verguenza/compare");
+        expect(Page.urlFor(pname, "history")).to.equal("/verguenza/history");
+        expect(Page.urlFor(pname, "compare")).to.equal("/verguenza/compare");
         expect(Page.urlFor(pname, "new")).to.equal("/pages/new/verguenza");
         expect(Page.urlFor(pname, "new error")).to.equal("/pages/new/verguenza?e=1");
       });
@@ -128,12 +128,12 @@ describe ("Models", function () {
         var Page = models.Page,
           pname = "verguenza";
 
-        expect(Page.urlFor(pname, "show", "/bazinga")).to.equal("/bazinga/wiki/verguenza");
+        expect(Page.urlFor(pname, "show", "/bazinga")).to.equal("/bazinga/verguenza");
         expect(Page.urlFor(pname, "edit", "/bazinga")).to.equal("/bazinga/pages/verguenza/edit");
         expect(Page.urlFor(pname, "edit error", "/bazinga")).to.equal("/bazinga/pages/verguenza/edit?e=1");
         expect(Page.urlFor(pname, "edit put", "/bazinga")).to.equal("/bazinga/pages/verguenza");
-        expect(Page.urlFor(pname, "history", "/bazinga")).to.equal("/bazinga/wiki/verguenza/history");
-        expect(Page.urlFor(pname, "compare", "/bazinga")).to.equal("/bazinga/wiki/verguenza/compare");
+        expect(Page.urlFor(pname, "history", "/bazinga")).to.equal("/bazinga/verguenza/history");
+        expect(Page.urlFor(pname, "compare", "/bazinga")).to.equal("/bazinga/verguenza/compare");
         expect(Page.urlFor(pname, "new", "/bazinga")).to.equal("/bazinga/pages/new/verguenza");
         expect(Page.urlFor(pname, "new error", "/bazinga")).to.equal("/bazinga/pages/new/verguenza?e=1");
       });
@@ -142,12 +142,12 @@ describe ("Models", function () {
 
         m = getModel("chupito");
 
-        expect(m.urlFor("show")).to.equal("/wiki/chupito");
+        expect(m.urlFor("show")).to.equal("/chupito");
         expect(m.urlFor("edit")).to.equal("/pages/chupito/edit");
         expect(m.urlFor("edit error")).to.equal("/pages/chupito/edit?e=1");
         expect(m.urlFor("edit put")).to.equal("/pages/chupito");
-        expect(m.urlFor("history")).to.equal("/wiki/chupito/history");
-        expect(m.urlFor("compare")).to.equal("/wiki/chupito/compare");
+        expect(m.urlFor("history")).to.equal("/chupito/history");
+        expect(m.urlFor("compare")).to.equal("/chupito/compare");
         expect(m.urlFor("new")).to.equal("/pages/new/chupito");
         expect(m.urlFor("new error")).to.equal("/pages/new/chupito?e=1");
       });
@@ -162,12 +162,12 @@ describe ("Models", function () {
           }
         });
 
-        expect(m.urlFor("show")).to.equal("/lovely/wiki/chupito");
+        expect(m.urlFor("show")).to.equal("/lovely/chupito");
         expect(m.urlFor("edit")).to.equal("/lovely/pages/chupito/edit");
         expect(m.urlFor("edit error")).to.equal("/lovely/pages/chupito/edit?e=1");
         expect(m.urlFor("edit put")).to.equal("/lovely/pages/chupito");
-        expect(m.urlFor("history")).to.equal("/lovely/wiki/chupito/history");
-        expect(m.urlFor("compare")).to.equal("/lovely/wiki/chupito/compare");
+        expect(m.urlFor("history")).to.equal("/lovely/chupito/history");
+        expect(m.urlFor("compare")).to.equal("/lovely/chupito/compare");
         expect(m.urlFor("new")).to.equal("/lovely/pages/new/chupito");
         expect(m.urlFor("new error")).to.equal("/lovely/pages/new/chupito?e=1");
       });
@@ -298,7 +298,7 @@ describe ("Models", function () {
           done();
         });
       });
-      
+
       it ("should fetch the content for a page with content retrieved 3", function (done) {
 
         // Jingo convention for title in the content

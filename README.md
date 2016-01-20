@@ -35,7 +35,7 @@ Jingo is very much inspired by (and format-compatible with) the github own wiki 
 
 Think of jingo as "the github wiki, without github but with more features". "Jingo" means "Jingo is not Gollum" for more than one reason.
 
-There is a demo server running at http://jingo.cica.li:6067/wiki/home
+There is a demo server running at http://jingo.cica.li:6067/home
 
 ![Screenshot](https://dl.dropboxusercontent.com/u/152161/jingo/ss2.png)
 
@@ -157,7 +157,7 @@ Customization
 
 You can customize jingo in four different ways:
 
-- add a left sidebar to every page: just add a file named `_sidebar.md` containing the markdown you want to display to the repository. You can edit or create the sidebar from Jingo itself, visiting `/wiki/_sidebar` (note that the title of the page in this case is useless)
+- add a left sidebar to every page: just add a file named `_sidebar.md` containing the markdown you want to display to the repository. You can edit or create the sidebar from Jingo itself, visiting `/_sidebar` (note that the title of the page in this case is useless)
 - add a footer to every page: the page you need to create is `_footer.md` and the same rules for the sidebar apply
 - add a custom CSS file, included in every page as the last file. The default name of the file is `_style.css` and it must reside in the document directory (but can stay out of the repo). It is not possible to edit the file from jingo itself
 - add a custom JavaScript file, included in every page as the last JavaScript file. The default name of the file is `_script.js` and it must reside in the document directory (but can stay out of the repo). It is not possible to edit the file from jingo itself
@@ -340,7 +340,7 @@ Configuration options reference
 
   Enable or disable CORS headers for accessing a page through an ajax call from an origin which is not the one which serves Jingo. Use this option if for example you want to embed a (rendered) page inside a page of another website.
 
-  The configuration options for CORS are at the moment quite limited: via an Ajax call you can only read (GET) a wiki page (that is, the /wiki/NameOfYourPage path), or issue a search. Once you enable this option, all the wiki page will be accessible. Please note that no authentication check is made, which means that the Ajax calls will be denied if the `anonRead` configuration option will be `false` (all or nothing).
+  The configuration options for CORS are at the moment quite limited: via an Ajax call you can only read (GET) a wiki page (that is, the /NameOfYourPage path), or issue a search. Once you enable this option, all the wiki page will be accessible. Please note that no authentication check is made, which means that the Ajax calls will be denied if the `anonRead` configuration option will be `false` (all or nothing).
 
   You can also white-list origin via the following option (CORS.allowedOrigin)
 
